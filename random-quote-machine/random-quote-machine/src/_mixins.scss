@@ -1,0 +1,19 @@
+@import "_variables.scss";
+
+@mixin flexCenter($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin btnStyle(){
+  background-color: $btnColor;
+  color: black;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px 5px 10px;
+  margin: 0px 5px 0px 5px;
+  border-radius: 3px;
+}
+
