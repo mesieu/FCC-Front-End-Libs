@@ -1,4 +1,4 @@
-body {
+#root {
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13,5 +13,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+#display {
+  text-align: center;
 }
 /*# sourceMappingURL=App.css.map */
