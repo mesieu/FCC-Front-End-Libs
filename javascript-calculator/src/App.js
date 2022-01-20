@@ -3,21 +3,21 @@ import './App.css';
 
 const buttons = [
   {"id": "clear", "value": "AC", "type": 'clear', 'className': 'bigButton'},
-  {"id": "multiply", "value": "*", "type": 'operator', 'className': 'button'},
-  {"id": "seven", "value": '7', "type": 'digit', 'className': 'button'},
-  {"id": "eight", "value": '8', "type": 'digit', 'className': 'button'},
-  {"id": "nine", "value": '9', "type": 'digit', 'className': 'button'},
-  {"id": "divide", "value": "/", "type": 'operator', 'className': 'button'},
-  {"id": "four", "value": '4', "type": 'digit', 'className': 'button'},
-  {"id": "five", "value": '5', "type": 'digit', 'className': 'button'},
-  {"id": "six", "value": '6', "type": 'digit', 'className': 'button'},
-  {"id": "add", "value": "+", "type": 'operator', 'className': 'button'},
-  {"id": "one", "value": '1', "type": 'digit', 'className': 'button'},
-  {"id": "two", "value": '2', "type": 'digit', 'className': 'button'},
-  {"id": "three", "value": '3', "type": 'digit', 'className': 'button'},
-  {"id": "subtract", "value": "-", "type": 'operator', 'className': 'button'},
-  {"id": "zero", "value": '0', "type": 'digit', 'className': 'button'},
-  {"id": "decimal", "value": ".", "type": 'decimal', 'className': 'button'},
+  {"id": "multiply", "value": "*", "type": 'operator', 'className': 'smallButton'},
+  {"id": "seven", "value": '7', "type": 'digit', 'className': 'smallButton'},
+  {"id": "eight", "value": '8', "type": 'digit', 'className': 'smallButton'},
+  {"id": "nine", "value": '9', "type": 'digit', 'className': 'smallButton'},
+  {"id": "divide", "value": "/", "type": 'operator', 'className': 'smallButton'},
+  {"id": "four", "value": '4', "type": 'digit', 'className': 'smallButton'},
+  {"id": "five", "value": '5', "type": 'digit', 'className': 'smallButton'},
+  {"id": "six", "value": '6', "type": 'digit', 'className': 'smallButton'},
+  {"id": "add", "value": "+", "type": 'operator', 'className': 'smallButton'},
+  {"id": "one", "value": '1', "type": 'digit', 'className': 'smallButton'},
+  {"id": "two", "value": '2', "type": 'digit', 'className': 'smallButton'},
+  {"id": "three", "value": '3', "type": 'digit', 'className': 'smallButton'},
+  {"id": "subtract", "value": "-", "type": 'operator', 'className': 'smallButton'},
+  {"id": "zero", "value": '0', "type": 'digit', 'className': 'smallButton'},
+  {"id": "decimal", "value": ".", "type": 'decimal', 'className': 'smallButton'},
   {"id": "equals", "value": "=", "type": 'equals', 'className': 'mediumButton'}]
 
 //* Calculator Component
@@ -99,10 +99,6 @@ const Calculator = () => {
     evaluateEquation(currentEquation);
   }
 
-  const testEvaluateEquation = () => {
-    setCurrentEquation('1*+-+1');
-  }
-
   const evaluateEquation = (equation) => {
     equation = equation.replace(/--/, '+')
     equation = equation.replace()
@@ -122,8 +118,10 @@ const Calculator = () => {
 
   return (
     <div id='calculator'>
-      <Equation currentEquation={currentEquation}/>
-      <Display currentVal={currentVal}/>
+      <div id='screen'>
+        <Equation currentEquation={currentEquation}/>
+        <Display currentVal={currentVal}/>
+      </div>
       <div id='buttons'>
         {buttons.map((button, i) => {
           return (

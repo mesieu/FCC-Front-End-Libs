@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('//db.onlinewebfonts.com/c/63f874d192fb3892d88d5e26f942b5e2?family=DS-Digital');
+@mixin buttons {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  color: white;
+  border-radius: 7px;
+  border-style: ridge;
+  
+}
+
 #root {
   height: 100vh;
   display: flex;
@@ -5,30 +16,60 @@
   justify-content: center;
 }
 
-#display{
-  height: 20px;
-  border-style: solid;
-  border-color: black;
-  text-align: right;
+#calculator{
+  padding: 10px;
+  border-radius: 8px;
+  background-color: black;
 }
 
-#equation{
-  height: 15px;
-  border-style: solid;
+#screen {
+  border-style: ridge;
   border-color: black;
+  background-color: rgb(137, 212, 61);
+  #display{
+    height: 20px;
+    font-family: DS-Digital;
+    text-align: right;
+    font-size: 1.5em;
+  }
+  #equation{
+    height: 15px;
+    font-family: DS-Digital;
+    font-size: 1.2em;
+  }
 }
 
 #buttons{
   display: flex;
   flex-wrap: wrap;
-  .button{
+  
+  .smallButton{
     width: 25%;
+    height:60px;
+    @include buttons;
+    background-color: black;
+    &:hover{
+      background-color: rgb(117, 117, 117);
+    }
+
   }
   .mediumButton{
     width: 50%;
+    @include buttons;
+    background-color: black;
+    &:hover{
+      background-color: rgb(117, 117, 117);
+    }
   }
   .bigButton{
     width: 75%;
+    @include buttons;
+    background-color: black;
+    &:hover{
+      background-color: rgb(117, 117, 117);
+    }
   }
+  
 }
+
 
