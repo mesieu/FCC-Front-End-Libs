@@ -1,4 +1,3 @@
-import { toHaveAccessibleName } from '@testing-library/jest-dom/dist/matchers';
 import {React, useState, useEffect} from 'react';
 import './App.css';
 import drumPadGroup from './padGroup'
