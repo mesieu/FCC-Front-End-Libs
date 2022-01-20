@@ -1,0 +1,46 @@
+#root {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#display {
+  height: 20px;
+  border-style: solid;
+  border-color: black;
+  text-align: right;
+}
+
+#equation {
+  height: 15px;
+  border-style: solid;
+  border-color: black;
+}
+
+#buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#buttons .button {
+  width: 25%;
+}
+
+#buttons .mediumButton {
+  width: 50%;
+}
+
+#buttons .bigButton {
+  width: 75%;
+}
+/*# sourceMappingURL=App.css.map */
